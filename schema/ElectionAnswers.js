@@ -37,7 +37,6 @@ cube(`ElectionAnswers`, {
           END) OVER(PARTITION BY user_id) AS marital,
           COUNT(user_id) OVER(PARTITION BY question_variable) AS total_users_by_q
         FROM  election_answers
-        -- GROUP BY 1, 2, 3
   `,
   //WHERE ( ${FILTER_PARAMS.ElectionAnswers.questionCodeHack.filter(
   //               "Question_Variable"
